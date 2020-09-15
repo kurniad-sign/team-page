@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  height: 100%;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  grid-template-columns: 1fr;
+}
+
+header .team__header {
+  font-size: 2.25rem;
+  letter-spacing: -0.045em;
+  margin-bottom: 17px;
+}
+
+footer {
+  padding: 20px 0;
+  text-align: center;
+  color: #a9a9a9;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.wrapper {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.font-serif {
+  font-family: "PT Serif", serif;
+}
+
+.grid__wrapper {
+  display: grid;
+}
+
+.team__description h2 {
+  font-size: 1.28rem;
+}
+
+.team__owner {
+  position: relative;
+}
+
+.team__owner .role {
+  position: absolute;
+  writing-mode: vertical-lr;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin-left: 4px;
+}
+
+.team__owner .name {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* For Mobile Device */
+@media screen and (max-width: 425px) {
+  header {
+    padding: 17px 0;
+  }
+
+  main {
+    padding-top: 21px;
+    padding-bottom: 38px;
+  }
+
+  .team__description h2 {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+  }
+
+  .team__description p {
+    font-size: 0.875rem;
+  }
+
+  .team__owner {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 300px);
+    grid-gap: 20px;
+  }
+
+  .team__owner .role {
+    font-size: 0.625rem;
+  }
+
+  .individual__owner:nth-child(2n + 2) {
+    align-self: flex-end;
+  }
+
+  .individual__owner {
+    width: 140px;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+  body {
+    background-color: yellow;
+  }
+}
+
+/* For Desktop Device */
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    max-width: 73.125rem;
+    margin: auto;
+    padding: 0;
+  }
+
+  main {
+    padding-bottom: 100px;
+  }
+
+  header {
+    padding: 50px 0;
+  }
+
+  header > .grid__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header .team__header {
+    margin: 0;
+  }
+
+  .team__description h2 {
+    margin-bottom: 10px;
+  }
+
+  .team__description p {
+    width: 400px;
+  }
+
+  .team__owner {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 700px);
+    grid-gap: 60px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .team__owner .name {
+    font-size: 1.125rem;
+  }
+
+  .individual__owner {
+    width: 300px;
+  }
+
+  .individual__owner:nth-child(3n + 2) {
+    align-self: flex-end;
+  }
+
+  .individual__owner:nth-child(3n + 1) {
+    justify-self: start;
+  }
+
+  .individual__owner:nth-child(3n) {
+    justify-self: end;
+  }
+}
